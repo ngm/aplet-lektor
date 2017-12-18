@@ -48,7 +48,7 @@
                     </li>
                 </ul>
                 <ul class="nav nav-pills flex-column">
-                {% for child in site.query('/products') %}
+                {% for child in site.query('/products').order_by('title') %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ child|url }}">{{child.title}}</a>
                     </li>
