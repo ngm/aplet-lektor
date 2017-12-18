@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<h1>{{ this.title }}</h1>
+<iframe width="100%" height="1000px" src="{{ this.report_src }}"></iframe>
+{% endblock %}

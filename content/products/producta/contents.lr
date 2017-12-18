@@ -1,0 +1,12 @@
+_model: product
+---
+title: Product A
+
+---
+report_src: reportProdA.html
+
+___
+
+body:
+
+asdf
