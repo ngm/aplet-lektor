@@ -50,7 +50,15 @@
                 <ul class="nav nav-pills flex-column">
                 {% for child in site.query('/products').order_by('title') %}
                     <li class="nav-item">
-                        <a class="nav-link{% if this == child %} active{% endif %}" href="{{ child|url }}">{{child.title}} ({% if child.pass_status %}<i class="fa fa-check" style="color:green"></i>{% else %}<i class="fa fa-times" style="color:red"></i>{% endif %})</a>
+                        <a class="nav-link{% if this == child %} active{% endif %}" href="{{ child|url }}">{{child.title}} 
+                            ({% if child.test_status == "passed" %}
+                            <i class="fa fa-check" style="color:green"></i>
+                            {% elif child.test_status == "failed" %}
+                            <i class="fa fa-times" style="color:red"></i>
+                            {% else %}
+                            <i class="fa fa-question" style="color:orange"></i>
+                            {% endif %})
+                        </a>
                     </li>
                 {% endfor %}
                 </ul>

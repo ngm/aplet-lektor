@@ -3,11 +3,16 @@
 {% block body %}
 <h1>
     {{ this.title }}
-    ({% if this.pass_status %}
+    (
+    {% if this.test_status == "passed" %}
     <i class="fa fa-check" style="color:green"></i>
-    {% else %}
+    {% elif this.test_status == "failed" %}
     <i class="fa fa-times" style="color:red"></i>
-    {% endif %})
+    {% else %}
+    <i class="fa fa-question" style="color:orange"></i>
+    {% endif %}
+    )
+
 </h1>
 <h2>Feature Model Selection</h2>
 <img src="./feature_model.svg" width="100%" />

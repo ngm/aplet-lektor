@@ -2,6 +2,6 @@ _model: product
 ---
 title: <<PRODUCT>>
 ---
-pass_status: <<PASS_STATUS>>
+test_status: <<TEST_STATUS>>
 ---
 body:
